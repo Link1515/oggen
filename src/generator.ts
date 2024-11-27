@@ -74,7 +74,7 @@ function flattenMetadata(metadata: unknown, { separator = ':', basePrefix = '' }
 }
 
 function metaToString({ flatMetadata: { key, value }, type }: { flatMetadata: MetadataFlat; type: string }) {
-  return `<meta ${type.trim()}="${key.trim()}" value="${value.trim()}" />`;
+  return `<meta ${type.trim()}="${key.trim()}" content="${value.trim()}" />`;
 }
 
 function buildMetaStrings({ flatMetadata, type }: { flatMetadata: MetadataFlat[]; type: string }) {
