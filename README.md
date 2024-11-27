@@ -68,20 +68,20 @@ console.log(metadata);
 /*
 
       <!-- og meta -->
-      <meta property="og:title" value="IT-Tools" />
-      <meta property="og:description" value="Lorem ipsum" />
-      <meta property="og:image:url" value="https://example.com/image.png" />
-      <meta property="og:image:alt" value="The image alt text" />
-      <meta property="og:image:width" value="600" />
-      <meta property="og:image:height" value="400" />
-      <meta property="og:locale" value="en_US" />
-      <meta property="og:site_name" value="IT-Tools" />
+      <meta property="og:title" content="IT-Tools" />
+      <meta property="og:description" content="Lorem ipsum" />
+      <meta property="og:image:url" content="https://example.com/image.png" />
+      <meta property="og:image:alt" content="The image alt text" />
+      <meta property="og:image:width" content="600" />
+      <meta property="og:image:height" content="400" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:site_name" content="IT-Tools" />
 
       <!-- twitter meta -->
-      <meta name="twitter:title" value="IT-Tools" />
-      <meta name="twitter:description" value="Lorem ipsum" />
-      <meta name="twitter:image" value="https://example.com/image.png" />
-      <meta name="twitter:image:alt" value="The image alt text" />
+      <meta name="twitter:title" content="IT-Tools" />
+      <meta name="twitter:description" content="Lorem ipsum" />
+      <meta name="twitter:image" content="https://example.com/image.png" />
+      <meta name="twitter:image:alt" content="The image alt text" />
 
 
 */
@@ -109,12 +109,12 @@ console.log(metadata);
 /*
 
 <!-- og meta -->
-<meta property="og:music:author:name" value="Person 1" />
-<meta property="og:music:author:city" value="London" />
-<meta property="og:music:author:name" value="Person 2" />
-<meta property="og:music:author:city" value="Paris" />
-<meta property="og:music:tags" value="Tag 1" />
-<meta property="og:music:tags" value="Tag 2" />
+<meta property="og:music:author:name" content="Person 1" />
+<meta property="og:music:author:city" content="London" />
+<meta property="og:music:author:name" content="Person 2" />
+<meta property="og:music:author:city" content="Paris" />
+<meta property="og:music:tags" content="Tag 1" />
+<meta property="og:music:tags" content="Tag 2" />
 
 */
 ```
@@ -143,13 +143,13 @@ console.log(metadata);
 /*
 
 <!-- og meta -->
-<meta property="og:title" value="IT-Tools" />
-<meta property="og:description" value="Lorem ipsum" />
+<meta property="og:title" content="IT-Tools" />
+<meta property="og:description" content="Lorem ipsum" />
 
 <!-- twitter meta -->
-<meta name="twitter:title" value="Title for twitter" />
-<meta name="twitter:description" value="Lorem ipsum" />   // <-- present because of 'generateTwitterCompatibleMeta'
-<meta name="twitter:card" value="summary_large_image" />
+<meta name="twitter:title" content="Title for twitter" />
+<meta name="twitter:description" content="Lorem ipsum" />   // <-- present because of 'generateTwitterCompatibleMeta'
+<meta name="twitter:card" content="summary_large_image" />
 
 */
 ```
