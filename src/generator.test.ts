@@ -9,8 +9,8 @@ describe('generators', () => {
         { key: 'og:description', value: 'Lorem ipsum' },
       ];
       expect(buildMetaStrings({ flatMetadata, type: 'property' })).to.eql([
-        '<meta property="og:title" value="it-tools" />',
-        '<meta property="og:description" value="Lorem ipsum" />',
+        '<meta property="og:title" content="it-tools" />',
+        '<meta property="og:description" content="Lorem ipsum" />',
       ]);
     });
   });
@@ -46,7 +46,7 @@ describe('generators', () => {
   describe('generateMeta', () => {
     it('generates meta strings', () => {
       expect(generateMeta({ title: 'it-tools', description: 'A website with tools' })).to.eql(
-        ['<!-- og meta -->', '<meta property="og:title" value="it-tools" />', '<meta property="og:description" value="A website with tools" />'].join('\n'),
+        ['<!-- og meta -->', '<meta property="og:title" content="it-tools" />', '<meta property="og:description" content="A website with tools" />'].join('\n'),
       );
     });
 
@@ -56,7 +56,7 @@ describe('generators', () => {
 
     it('handle array of values', () => {
       expect(generateMeta({ movie: { author: ['Jane Mi', 'John Do'] } })).to.eql(
-        '<!-- og meta -->\n<meta property="og:movie:author" value="Jane Mi" />\n<meta property="og:movie:author" value="John Do" />',
+        '<!-- og meta -->\n<meta property="og:movie:author" content="Jane Mi" />\n<meta property="og:movie:author" content="John Do" />',
       );
     });
 
@@ -64,12 +64,12 @@ describe('generators', () => {
       expect(generateMeta({ title: 'it-tools', description: 'Lorem ipsum', twitter: { title: 'it-tools twitter' } }, { generateTwitterCompatibleMeta: true })).to.eql(
         [
           '<!-- og meta -->',
-          '<meta property="og:title" value="it-tools" />',
-          '<meta property="og:description" value="Lorem ipsum" />',
+          '<meta property="og:title" content="it-tools" />',
+          '<meta property="og:description" content="Lorem ipsum" />',
           '',
           '<!-- twitter meta -->',
-          '<meta name="twitter:title" value="it-tools twitter" />',
-          '<meta name="twitter:description" value="Lorem ipsum" />',
+          '<meta name="twitter:title" content="it-tools twitter" />',
+          '<meta name="twitter:description" content="Lorem ipsum" />',
         ].join('\n'),
       );
     });
@@ -80,13 +80,13 @@ describe('generators', () => {
       ).to.eql(
         [
           '   <!-- og meta -->',
-          '   <meta property="og:title" value="it-tools" />',
-          '   <meta property="og:description" value="A website with tools" />',
-          '   <meta property="og:weird_case_url_stuff" value="true" />',
+          '   <meta property="og:title" content="it-tools" />',
+          '   <meta property="og:description" content="A website with tools" />',
+          '   <meta property="og:weird_case_url_stuff" content="true" />',
           '',
           '   <!-- twitter meta -->',
-          '   <meta name="twitter:title" value="it-tools" />',
-          '   <meta name="twitter:description" value="A website with tools" />',
+          '   <meta name="twitter:title" content="it-tools" />',
+          '   <meta name="twitter:description" content="A website with tools" />',
         ].join('\n'),
       );
     });
